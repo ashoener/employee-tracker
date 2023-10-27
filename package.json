@@ -1,0 +1,31 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashoener/employee-tracker.git"
+  },
+  "author": "Andrew Shoener",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashoener/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/ashoener/employee-tracker#readme",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "inquirer": "8.2.4",
+    "mysql2": "^3.6.2"
+  }
+}
