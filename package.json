@@ -17,15 +17,17 @@
     "url": "https://github.com/ashoener/employee-tracker/issues"
   },
   "homepage": "https://github.com/ashoener/employee-tracker#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "inquirer": "8.2.4",
+    "mysql2": "^3.6.2",
+    "sequelize": "^6.33.0"
+  },
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "inquirer": "8.2.4",
-    "mysql2": "^3.6.2"
   }
 }
