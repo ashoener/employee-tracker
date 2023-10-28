@@ -6,6 +6,16 @@ import Employee from "./lib/schemas/employee.js";
 
 import { faker } from "@faker-js/faker";
 
+const frames = ["|", "/", "—", "\\"];
+let frame = 0;
+process.stdout.write(`Seeding (${frames[frame]})`);
+const connectingAnimation = setInterval(() => {
+  frame++;
+  if (frame > frames.length - 1) frame = 0;
+  process.stdout.cursorTo(0);
+  process.stdout.write(`Seeding (${frames[frame]})`);
+}, 150);
+
 await db.sync({ force: true });
 
 await Department.bulkCreate([
@@ -79,6 +89,9 @@ employees = employees.map((e, i) => ({
 }));
 
 await Employee.bulkCreate(employees, { updateOnDuplicate: ["managerId"] });
+
+process.stdout.clearLine(0);
+process.stdout.cursorTo(0);
 
 console.log("Successfully seeded db");
 process.exit(0);
