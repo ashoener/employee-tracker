@@ -14,11 +14,12 @@ console.log(logo({ name: "Employee Tracker" }).render());
 
 const frames = ["|", "/", "—", "\\"];
 let frame = 0;
+process.stdout.write(`Connecting to database (${frames[frame]})`);
 const connectingAnimation = setInterval(() => {
-  process.stdout.cursorTo(0);
-  process.stdout.write(`Connecting to database (${frames[frame]})`);
   frame++;
   if (frame > frames.length - 1) frame = 0;
+  process.stdout.cursorTo(0);
+  process.stdout.write(`Connecting to database (${frames[frame]})`);
 }, 150);
 
 await db.sync({ force: false });
