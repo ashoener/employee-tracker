@@ -81,3 +81,4 @@ employees = employees.map((e, i) => ({
 await Employee.bulkCreate(employees, { updateOnDuplicate: ["managerId"] });
 
 console.log("Successfully seeded db");
+process.exit(0);
