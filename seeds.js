@@ -90,6 +90,8 @@ employees = employees.map((e, i) => ({
 
 await Employee.bulkCreate(employees, { updateOnDuplicate: ["managerId"] });
 
+clearInterval(connectingAnimation);
+
 process.stdout.clearLine(0);
 process.stdout.cursorTo(0);
 
