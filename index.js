@@ -12,6 +12,7 @@ import logo from "asciiart-logo";
 
 console.log(logo({ name: "Employee Tracker" }).render());
 
+// Connecting animation
 const frames = ["|", "/", "—", "\\"];
 let frame = 0;
 process.stdout.write(`Connecting to database (${frames[frame]})`);
@@ -24,6 +25,7 @@ const connectingAnimation = setInterval(() => {
 
 await db.sync({ force: false });
 
+// Clean up connecting animation
 process.stdout.clearLine(0);
 process.stdout.cursorTo(0);
 
